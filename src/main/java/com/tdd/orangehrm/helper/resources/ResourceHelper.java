@@ -40,8 +40,20 @@ public class ResourceHelper {
 		return getResourcePath()+"images/";
 	}
 	
+	/**
+	 * This method will return the properties file path
+	 * @return
+	 */
 	public static String getPropertiesFilePath() {
 		return getResourcePath()+"propertiesFile/";
+	}
+	
+	/**
+	 * This method will return the Automation report path
+	 * @return
+	 */
+	public static String getReportPath() {
+		return getProjectPath()+"AutomationReport/";
 	}
 	
 	public static void main(String[] args) {
