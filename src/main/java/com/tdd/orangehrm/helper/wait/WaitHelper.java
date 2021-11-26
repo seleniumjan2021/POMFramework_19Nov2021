@@ -24,7 +24,7 @@ public class WaitHelper {
 		this.driver = driver;
 	}
 
-	public static void setImplicitWait(long timeout, TimeUnit unit) {
+	public void setImplicitWait(long timeout, TimeUnit unit) {
 		driver.manage().timeouts().implicitlyWait(timeout, unit);
 		log.info("Implicit wait has been set to: " +timeout);
 	}
@@ -36,7 +36,7 @@ public class WaitHelper {
 	 * @param timeoutInSeconds
 	 * @return
 	 */
-	public static boolean waitForElementVisible(WebElement element , int timeoutInSeconds) {
+	public boolean waitForElementVisible(WebElement element , int timeoutInSeconds) {
 		boolean display = false;
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
@@ -48,7 +48,8 @@ public class WaitHelper {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			return element.isDisplayed();
 		}catch (Exception e) {
-		 log.info(element.toString() + "element is not visible after "+timeoutInSeconds+" seconds." );
+		 
+			log.info(element.toString() + "element is not visible after "+timeoutInSeconds+" seconds." );
 		}
 		return display;
 	}
@@ -58,7 +59,7 @@ public class WaitHelper {
 	 * @param timeoutInSeconds
 	 * @return
 	 */
-	public static boolean waitForElementClickable(WebElement element , int timeoutInSeconds) {
+	public  boolean waitForElementClickable(WebElement element , int timeoutInSeconds) {
 		boolean clickable = false;
 		try {
 			log.info("waiting for : "+element+" : "+timeoutInSeconds + "seconds to be clickable");

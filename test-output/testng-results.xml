@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LoginTest suite" duration-ms="15891" started-at="2021-11-25T16:22:59Z" finished-at="2021-11-25T16:23:14Z">
+    <groups>
+    </groups>
+    <test name="Login test" duration-ms="15891" started-at="2021-11-25T16:22:59Z" finished-at="2021-11-25T16:23:14Z">
+      <class name="com.tdd.orangehrm.testcase.LoginPageTest">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@2f177a4b]" name="setup" is-config="true" duration-ms="8543" started-at="2021-11-25T16:22:50Z" finished-at="2021-11-25T16:22:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@363042d7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="objectDeclaration()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@2f177a4b]" name="objectDeclaration" is-config="true" duration-ms="9" started-at="2021-11-25T16:22:59Z" finished-at="2021-11-25T16:22:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- objectDeclaration -->
+        <test-method status="PASS" signature="verifyLogo()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@2f177a4b]" name="verifyLogo" duration-ms="316" started-at="2021-11-25T16:22:59Z" description="Logo Verification" finished-at="2021-11-25T16:22:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogo -->
+        <test-method status="PASS" signature="loginIntoApplication()[pri:1, instance:com.tdd.orangehrm.testcase.LoginPageTest@2f177a4b]" name="loginIntoApplication" duration-ms="15473" started-at="2021-11-25T16:22:59Z" description="Login with valid credentials" finished-at="2021-11-25T16:23:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginIntoApplication -->
+        <test-method status="PASS" signature="objectDeclaration()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@2f177a4b]" name="objectDeclaration" is-config="true" duration-ms="0" started-at="2021-11-25T16:22:59Z" finished-at="2021-11-25T16:22:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- objectDeclaration -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestContext)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@2f177a4b]" name="tearDown" is-config="true" duration-ms="251" started-at="2021-11-25T16:23:15Z" finished-at="2021-11-25T16:23:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@363042d7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdd.orangehrm.testcase.LoginPageTest -->
+    </test> <!-- Login test -->
+  </suite> <!-- LoginTest suite -->
+</testng-results>

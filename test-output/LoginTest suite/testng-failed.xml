@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LoginTest suite]">
+  <test thread-count="5" name="Login test(failed)">
+    <parameter name="environment" value="production"/>
+    <classes>
+      <class name="com.tdd.orangehrm.testcase.LoginPageTest">
+        <methods>
+          <include name="loginIntoApplication"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.tdd.orangehrm.testcase.LoginPageTest -->
+    </classes>
+  </test> <!-- Login test(failed) -->
+</suite> <!-- Failed suite [LoginTest suite] -->

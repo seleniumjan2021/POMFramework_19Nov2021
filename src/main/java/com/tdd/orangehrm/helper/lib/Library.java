@@ -17,7 +17,7 @@ public class Library {
 		this.driver = driver;
 	}
 	
-	private void clickOnElement(WebElement element) {
+	public void clickOnElement(WebElement element) {
 		try {
 			element.click();
 			log.info(element.toString() + " got clicked.");
@@ -31,7 +31,7 @@ public class Library {
 	 * @param element
 	 * @param vText
 	 */
-	private void setValueOnElement(WebElement element , String vText) {
+	public void setValueOnElement(WebElement element , String vText) {
 		try {
 			element.sendKeys(vText);
 			log.info(vText + " value set to " +element.toString());
@@ -44,7 +44,7 @@ public class Library {
 	 * This method will clear the existing value(if any) from the field. 
 	 * @param element
 	 */
-	private void clearValueFromEditField(WebElement element) {
+	public void clearValueFromEditField(WebElement element) {
 		try {
 			element.clear();
 			log.info(element.toString() + " value is cleared.");
