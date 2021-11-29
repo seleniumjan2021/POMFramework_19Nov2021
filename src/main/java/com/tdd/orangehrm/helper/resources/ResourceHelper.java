@@ -36,8 +36,8 @@ public class ResourceHelper {
 	 * This method will return the images path
 	 * @return
 	 */
-	public static String getImagePath() {
-		return getResourcePath()+"images/";
+	public static String getScreenshotPath() {
+		return getResourcePath()+"screenshot/";
 	}
 	
 	/**

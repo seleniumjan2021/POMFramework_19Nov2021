@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,17 @@
                     <div class="method-list-content passed suite-LoginTest_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LoginTest_suite" title="com.tdd.orangehrm.testcase.LoginPageTest" hash-for-method="loginIntoApplication">loginIntoApplication</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-LoginTest_suite" title="com.tdd.orangehrm.testcase.LoginPageTest" hash-for-method="loginIntoApplicationValidCred">loginIntoApplicationValidCred</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LoginTest_suite" title="com.tdd.orangehrm.testcase.LoginPageTest" hash-for-method="loginIntoAppplicationInvalidCred">loginIntoAppplicationInvalidCred</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LoginTest_suite" title="com.tdd.orangehrm.testcase.LoginPageTest" hash-for-method="verifyForgetPassword">verifyForgetPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -130,11 +140,29 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginIntoApplication">
-                  </a> <!-- loginIntoApplication -->
-                  <span class="method-name">loginIntoApplication</span>
+                  <a name="loginIntoApplicationValidCred">
+                  </a> <!-- loginIntoApplicationValidCred -->
+                  <span class="method-name">loginIntoApplicationValidCred</span>
                   <em>
 (Login with valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginIntoAppplicationInvalidCred">
+                  </a> <!-- loginIntoAppplicationInvalidCred -->
+                  <span class="method-name">loginIntoAppplicationInvalidCred</span>
+                  <em>
+(Login with Invalid Credentails)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyForgetPassword">
+                  </a> <!-- verifyForgetPassword -->
+                  <span class="method-name">verifyForgetPassword</span>
+                  <em>
+(Verify Forget password link)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -160,6 +188,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;LoginTest suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Login test&quot;&gt;
     &lt;parameter name=&quot;environment&quot; value=&quot;production&quot;/&gt;
+    &lt;parameter name=&quot;appName&quot; value=&quot;OrangeHRM&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.tdd.orangehrm.testcase.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
@@ -201,20 +230,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginIntoApplication')
+data.setCell(0, 1, 'loginIntoApplicationValidCred')
 data.setCell(0, 2, 'com.tdd.orangehrm.testcase.LoginPageTest')
-data.setCell(0, 3, 15473);
+data.setCell(0, 3, 25950);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyLogo')
+data.setCell(1, 1, 'verifyForgetPassword')
 data.setCell(1, 2, 'com.tdd.orangehrm.testcase.LoginPageTest')
-data.setCell(1, 3, 316);
+data.setCell(1, 3, 10034);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginIntoAppplicationInvalidCred')
+data.setCell(2, 2, 'com.tdd.orangehrm.testcase.LoginPageTest')
+data.setCell(2, 3, 2726);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyLogo')
+data.setCell(3, 2, 'com.tdd.orangehrm.testcase.LoginPageTest')
+data.setCell(3, 3, 248);
 window.suiteTableData['LoginTest_suite']= { tableData: data, tableDiv: 'times-div-LoginTest_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-LoginTest_suite">
               </div> <!-- times-div-LoginTest_suite -->
             </div> <!-- times-div -->
@@ -242,28 +279,44 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.tdd.orangehrm.testcase.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setup(org.testng.TestRunner@363042d7)</span>
+                <span class="method-name">setup(org.testng.TestRunner@73163d48)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">objectDeclaration</span>
-                <span class="method-start">8630 ms</span>
+                <span class="method-start">14479 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogo</span>
-                <span class="method-start">8639 ms</span>
+                <span class="method-start">14613 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">objectDeclaration</span>
-                <span class="method-start">8961 ms</span>
+                <span class="method-start">14882 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginIntoApplication</span>
-                <span class="method-start">8961 ms</span>
+                <span class="method-name">loginIntoApplicationValidCred</span>
+                <span class="method-start">14885 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">objectDeclaration</span>
+                <span class="method-start">40837 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginIntoAppplicationInvalidCred</span>
+                <span class="method-start">40839 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">objectDeclaration</span>
+                <span class="method-start">43586 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyForgetPassword</span>
+                <span class="method-start">43587 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
-                <span class="method-name">tearDown(org.testng.TestRunner@363042d7)</span>
-                <span class="method-start">24629 ms</span>
+                <span class="method-name">tearDown(org.testng.TestRunner@73163d48)</span>
+                <span class="method-start">53948 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

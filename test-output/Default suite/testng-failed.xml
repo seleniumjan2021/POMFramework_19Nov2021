@@ -5,9 +5,12 @@
     <classes>
       <class name="com.tdd.orangehrm.testcase.LoginPageTest">
         <methods>
-          <include name="loginIntoApplication"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="verifyLogo"/>
+          <include name="objectDeclaration"/>
+          <include name="loginIntoApplicationValidCred"/>
+          <include name="loginIntoAppplicationInvalidCred"/>
         </methods>
       </class> <!-- com.tdd.orangehrm.testcase.LoginPageTest -->
     </classes>

@@ -22,12 +22,12 @@ public class BrowserConfig {
 
 	private static Logger log = LoggerHelper.getLogger(BrowserConfig.class);
 	public WebDriver driver;
-	
-	//P->F->p->l
+
+	// P->F->p->l
 	public Properties getConfigProperty() {
 		Properties prop = new Properties();
 		try {
-			FileInputStream fis = new FileInputStream(ResourceHelper.getProjectPath()+"src/main/java/com/tdd"
+			FileInputStream fis = new FileInputStream(ResourceHelper.getProjectPath() + "src/main/java/com/tdd"
 					+ "/orangehrm/helper/config/config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
@@ -39,12 +39,13 @@ public class BrowserConfig {
 		}
 		return prop;
 	}
-	
+
 	public WebDriver getDriver() {
-		
-		if(System.getProperty("os.name").toLowerCase().contains("mac")) {
-			if(getConfigProperty().get("browser").toString().contains("chrome")) {
-				System.setProperty("webdriver.chrome.driver",ResourceHelper.getResourcePath()+"driver/chromedriver 2");
+
+		if (System.getProperty("os.name").toLowerCase().contains("mac")) {
+			if (getConfigProperty().get("browser").toString().contains("chrome")) {
+				System.setProperty("webdriver.chrome.driver",
+						ResourceHelper.getResourcePath() + "driver/chromedriver 2");
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("--test-type");
 				option.addArguments("--disable-pop-blocking");
@@ -54,20 +55,21 @@ public class BrowserConfig {
 				chrome.setJavascriptEnabled(true);
 				option.setCapability(ChromeOptions.CAPABILITY, chrome);
 				return new ChromeDriver(option);
-			}else if(getConfigProperty().get("browser").toString().contains("firefox")) {
-				System.setProperty("webdriver.gecko.driver",ResourceHelper.getResourcePath()+"driver/geckodriver 2");
-			    DesiredCapabilities firefox = DesiredCapabilities.firefox();
-			    FirefoxProfile profile = new FirefoxProfile();
-			    profile.setAcceptUntrustedCertificates(true);
-			    profile.setAssumeUntrustedCertificateIssuer(true); 
-			    firefox.setCapability(FirefoxDriver.PROFILE, profile);
-			    firefox.setCapability("marionette", true);
-			    FirefoxOptions firefoxOptions = new FirefoxOptions(firefox);
-			    return new FirefoxDriver(firefoxOptions);
+			} else if (getConfigProperty().get("browser").toString().contains("firefox")) {
+				System.setProperty("webdriver.gecko.driver", ResourceHelper.getResourcePath() + "driver/geckodriver 2");
+				DesiredCapabilities firefox = DesiredCapabilities.firefox();
+				FirefoxProfile profile = new FirefoxProfile();
+				profile.setAcceptUntrustedCertificates(true);
+				profile.setAssumeUntrustedCertificateIssuer(true);
+				firefox.setCapability(FirefoxDriver.PROFILE, profile);
+				firefox.setCapability("marionette", true);
+				FirefoxOptions firefoxOptions = new FirefoxOptions(firefox);
+				return new FirefoxDriver(firefoxOptions);
 			}
-		}else if(System.getProperty("os.name").toLowerCase().contains("windows")) {
-			if(getConfigProperty().get("browser").toString().contains("chrome")) {
-				System.setProperty("webdriver.chrome.driver",ResourceHelper.getResourcePath()+"driver/chromedriver.exe");
+		} else if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+			if (getConfigProperty().get("browser").toString().contains("chrome")) {
+				System.setProperty("webdriver.chrome.driver",
+						ResourceHelper.getResourcePath() + "driver/chromedriver.exe");
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("--test-type");
 				option.addArguments("--disable-pop-blocking");
@@ -77,16 +79,17 @@ public class BrowserConfig {
 				chrome.setJavascriptEnabled(true);
 				option.setCapability(ChromeOptions.CAPABILITY, chrome);
 				return new ChromeDriver(option);
-			}else if(getConfigProperty().get("browser").toString().contains("firefox")) {
-				System.setProperty("webdriver.gecko.driver",ResourceHelper.getResourcePath()+"driver/geckodriver 2.exe");
-			    DesiredCapabilities firefox = DesiredCapabilities.firefox();
-			    FirefoxProfile profile = new FirefoxProfile();
-			    profile.setAcceptUntrustedCertificates(true);
-			    profile.setAssumeUntrustedCertificateIssuer(true); 
-			    firefox.setCapability(FirefoxDriver.PROFILE, profile);
-			    firefox.setCapability("marionette", true);
-			    FirefoxOptions firefoxOptions = new FirefoxOptions(firefox);
-			    return new FirefoxDriver(firefoxOptions);
+			} else if (getConfigProperty().get("browser").toString().contains("firefox")) {
+				System.setProperty("webdriver.gecko.driver",
+						ResourceHelper.getResourcePath() + "driver/geckodriver 2.exe");
+				DesiredCapabilities firefox = DesiredCapabilities.firefox();
+				FirefoxProfile profile = new FirefoxProfile();
+				profile.setAcceptUntrustedCertificates(true);
+				profile.setAssumeUntrustedCertificateIssuer(true);
+				firefox.setCapability(FirefoxDriver.PROFILE, profile);
+				firefox.setCapability("marionette", true);
+				FirefoxOptions firefoxOptions = new FirefoxOptions(firefox);
+				return new FirefoxDriver(firefoxOptions);
 			}
 		}
 		return driver;

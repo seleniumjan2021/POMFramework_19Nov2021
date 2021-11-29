@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="LoginTest suite">
 	<test thread-count="5" verbose="2" name="Login test">
 	 <parameter name = "environment" value = "production"></parameter>
+	 <parameter name = "appName" value = "OrangeHRM"></parameter>
 		<classes>
 			<class name="com.tdd.orangehrm.testcase.LoginPageTest">
 			</class>

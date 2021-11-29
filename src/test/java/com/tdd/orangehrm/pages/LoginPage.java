@@ -41,6 +41,12 @@ public class LoginPage {
 	@FindBy(id = "welcome")
 	public WebElement welcome;
 	
+	@FindBy(xpath = "//a[contains(@href,'logout')]")
+	public WebElement logoutBtn;
+	
+	@FindBy(xpath = "//span[contains(text(),'Invalid')]")
+	public WebElement invalidPassMsg;
+	
 	//Methods of LoginPage
 	public void loginOrganeHRM(String username , String password){
 		 lib.clearValueFromEditField(userNameField);
