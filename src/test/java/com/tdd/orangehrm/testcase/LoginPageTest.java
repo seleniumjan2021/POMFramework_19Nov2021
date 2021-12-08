@@ -51,7 +51,7 @@ public class LoginPageTest extends TestBase {
 		login.loginOrganeHRM(TD.adminUsername, TD.invalidPassword);
 		if(wait.waitForElementVisible(login.invalidPassMsg,TD.standardWait)) {
 			String invalidMessge = login.invalidPassMsg.getText();
-			Assert.assertEquals(invalidMessge, "Invalid credentials");
+			Assert.assertEquals(invalidMessge, "Invalid!@#$% credentials");
 		}else {
 			Assert.fail();
 		}

@@ -2,6 +2,7 @@ package com.tdd.orangehrm.helper.extent;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
@@ -21,7 +22,7 @@ public class ExtentManager {
 	private static TestBase base = new TestBase();
 
 	public static ExtentReports getReportInstance() {
-
+		
 		// File Name formatting of your Report
 		String reportPath = null;
 		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
@@ -30,7 +31,7 @@ public class ExtentManager {
 		System.out.println(time);
 		String newTimeFormat = time.replaceAll("/", "_").replaceAll(" ", "_").replaceAll(":", "_");
 		System.out.println(newTimeFormat);
-		reportPath = ResourceHelper.getReportPath() + base.applicationName + "_" + newTimeFormat + ".html";
+		reportPath = ResourceHelper.getReportPath() +"OrangeHRM"+ "_" + newTimeFormat + ".html";
 		System.out.println(reportPath);
 
 		// Declaration of Extent Classs
@@ -49,7 +50,7 @@ public class ExtentManager {
 			report.config().setReportName("OrangeHRM Automation Execution Report");
 			report.config().setDocumentTitle("OrangeHRM EndtoEnd Test");
 		}
-		extent.setSystemInfo("Environment" ,base.applicationName);
+		extent.setSystemInfo("Environment" ,"Production");
 		extent.setSystemInfo("Author", "Ashutosh Kumar");
 		extent.setSystemInfo("Java Version", "JDK 8");
 		report.config().setTheme(Theme.STANDARD);

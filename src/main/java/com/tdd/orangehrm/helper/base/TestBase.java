@@ -2,6 +2,8 @@ package com.tdd.orangehrm.helper.base;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -11,6 +13,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -18,8 +23,9 @@ import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.google.common.util.concurrent.ExecutionList;
+import com.aventstack.extentreports.Status;
 import com.tdd.orangehrm.helper.browser.BrowserConfig;
+import com.tdd.orangehrm.helper.extent.ExtentManager;
 import com.tdd.orangehrm.helper.lib.Library;
 import com.tdd.orangehrm.helper.logger.LoggerHelper;
 import com.tdd.orangehrm.helper.resources.ResourceHelper;
@@ -54,6 +60,7 @@ public class TestBase {
 			log.info("Screenshots :" +ResourceHelper.getScreenshotPath());
 			log.info("Properties: "+ResourceHelper.getPropertiesFilePath());
 		}
+		
 		driver = brow.getDriver();
 		log.info("Driver initialization......");
 		driver.get((String) brow.getConfigProperty().get("URL"));
@@ -62,6 +69,7 @@ public class TestBase {
 		log.info("Maximizing Window");
 		wait = new WaitHelper(driver);
 		wait.setImplicitWait(10, TimeUnit.SECONDS);
+		extent = ExtentManager.getReportInstance();
 	}
 	
 	
@@ -83,17 +91,81 @@ public class TestBase {
 		}
 	}
 	
-	
-	public String takeScreenShotOnFailure(String testcaseName, WebDriver driver) throws IOException {
-		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		//String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateNam
-		String destination = ResourceHelper.getScreenshotPath()+testcaseName+".png";
-		File finalDestination = new File(destination);
-		FileUtils.copyFile(src, finalDestination);
-		return destination;
+	@BeforeMethod
+	public void beforeClass(ITestResult result) {		
+		test = extent.createTest(getClass().getSimpleName()+": "+result.getMethod().getMethodName());
 	}
 	
+	@AfterClass
+	public void afterClass() {
+		extent.flush();
+	}
 	
+	@AfterMethod
+	public void afterMethod(ITestResult result) {
+		
+		try {
+			if(result.getStatus() == ITestResult.FAILURE) {
+				log.info(result.getName() + "Test Failed...");
+				test.log(Status.FAIL, result.getName() + " Test Failed... Error Details:" + result.getThrowable());
+				addScreenShotToReport(driver);
+			}else if(result.getStatus() == ITestResult.SUCCESS) {
+				log.info(result.getName() + "Test Passed...");
+				test.log(Status.PASS, result.getName() + " Test Pass");
+			}else if(result.getStatus() == ITestResult.SKIP) {
+				log.info(result.getName() + "Test Skipped...");
+				test.log(Status.SKIP, result.getName() + " Test Skipped.." +result.getThrowable());
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			log.error(result.getName()+ "throws an exception. Exception details " +e.toString());
+		}
+		finally {
+//			if(driver != null) {
+//				driver.quit();
+//				log.info("**** finally driver quit, after executing method :" + result.getMethod().getMethodName());
+//			}
+			log.info(result.getName() + "Finished...");
+		}
+		
+	}
+	
+	public String takeScreenShotOnFailure(String fileName, WebDriver driver) throws IOException {
+		if(driver == null) {
+			log.info("driver is null .. not able to capture screenshot");
+			return null;
+		}		
+		if(fileName == "") {
+			fileName = "Blank";
+		}		
+		File destFile = null;
+		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		Date date = new Date();
+		String time = formatter.format(date);
+		System.out.println(time);
+		String newTimeFormat = time.replaceAll("/", "_").replaceAll(" ", "_").replaceAll(":", "_");
+		System.out.println(newTimeFormat);
+		//Taking the screenshot here
+		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		//Manipulating the name and storing back to destFile
+		try {
+		destFile = new File(ResourceHelper.getScreenshotPath()+fileName+"_"+newTimeFormat+".png");
+		//Copies srcFile to destFile
+		FileUtils.copyFile(srcFile, destFile);
+		Thread.sleep(2000);
+		test.info("Taking Screenshot to " +destFile.toString());
+		}catch (Exception e) {
+			log.info("Taking screenshot error : " +e.toString());
+		}
+		return destFile.toString();
+	}
+	
+	public static void addScreenShotToReport(WebDriver driver) throws IOException {
+		TestBase tb = new TestBase();
+		String imagePath = tb.takeScreenShotOnFailure("On_Failure", driver);
+		test.addScreenCaptureFromPath(imagePath);
+	}
 	
 	
 }

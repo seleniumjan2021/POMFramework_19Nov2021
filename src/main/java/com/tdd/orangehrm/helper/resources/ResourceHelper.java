@@ -37,7 +37,7 @@ public class ResourceHelper {
 	 * @return
 	 */
 	public static String getScreenshotPath() {
-		return getResourcePath()+"screenshot/";
+		return getProjectPath()+"screenshot/";
 	}
 	
 	/**

@@ -3,13 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [LoginTest suite]">
   <test thread-count="5" name="Login test(failed)">
     <parameter name="environment" value="production"/>
+    <parameter name="appName" value="OrangeHRM"/>
     <classes>
       <class name="com.tdd.orangehrm.testcase.LoginPageTest">
         <methods>
+          <include name="afterClass"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="afterMethod"/>
           <include name="objectDeclaration"/>
           <include name="loginIntoAppplicationInvalidCred"/>
+          <include name="beforeClass"/>
         </methods>
       </class> <!-- com.tdd.orangehrm.testcase.LoginPageTest -->
     </classes>
