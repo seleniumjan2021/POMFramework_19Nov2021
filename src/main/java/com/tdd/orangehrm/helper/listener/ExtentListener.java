@@ -20,8 +20,7 @@ public class ExtentListener extends TestBase implements ITestListener{
 	ExtentTest testListener;
 	private static ThreadLocal<ExtentTest> extentTestListener = new ThreadLocal<ExtentTest>();
 	
-	
-	@Override
+
 	public void onTestStart(ITestResult result) {
 		testListener = extentListener.createTest(result.getMethod().getMethodName());
 		extentTestListener.set(testListener);
@@ -29,13 +28,12 @@ public class ExtentListener extends TestBase implements ITestListener{
 		Reporter.log(result.getMethod().getMethodName() +"Started...");
 	}
 
-	@Override
+
 	public void onTestSuccess(ITestResult result) {
 		extentTestListener.get().log(Status.INFO, result.getName() + " Test Passed..");
 		Reporter.log(result.getMethod().getMethodName() +" Test Passed...");
 	}
 
-	@Override
 	public void onTestFailure(ITestResult result) {
 		extentTestListener.get().log(Status.INFO, result.getName() + "Test Failed..");
 		//extentTestListener.get().generateLog(Status.FAIL,(Markup) result.getThrowable());
@@ -48,25 +46,21 @@ public class ExtentListener extends TestBase implements ITestListener{
 		Reporter.log(result.getMethod().getMethodName() +" Test Failed..." +result.getThrowable());
 	}
 
-	@Override
 	public void onTestSkipped(ITestResult result) {
 		extentTestListener.get().log(Status.INFO, result.getName() + "Test Skipped.." +result.getThrowable());
 		Reporter.log(result.getMethod().getMethodName() +" Test Skipped..." +result.getThrowable());		
 	}
 
-	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void onFinish(ITestContext context) {
 		//extent.flush();
 	}
