@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.tdd.orangehrm.helper.base.TestBase;
 import com.tdd.orangehrm.helper.logger.LoggerHelper;
 
 public class WaitHelper {
@@ -46,10 +47,12 @@ public class WaitHelper {
 			wait.ignoring(StaleElementReferenceException.class);
 			wait.ignoring(NoSuchWindowException.class);
 			wait.until(ExpectedConditions.visibilityOf(element));
-			return element.isDisplayed();
+			TestBase.logInfoExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is visible after "+timeoutInSeconds+" seconds.");
+			return element.isDisplayed();	
 		}catch (Exception e) {
 		 
 			log.info(element.toString() + "element is not visible after "+timeoutInSeconds+" seconds." );
+			TestBase.logFailExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is not visible after "+timeoutInSeconds+" seconds.");
 		}
 		return display;
 	}
@@ -65,9 +68,11 @@ public class WaitHelper {
 			log.info("waiting for : "+element+" : "+timeoutInSeconds + "seconds to be clickable");
 			WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
+			TestBase.logInfoExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is clickable after "+timeoutInSeconds+" seconds.");
 			return element.isDisplayed();
 		}catch (Exception e) {
-		 log.info(element.toString() + "element is not visible after "+timeoutInSeconds+" seconds." );
+		 log.info(element.toString() + "element is not clickable after "+timeoutInSeconds+" seconds." );
+		 TestBase.logFailExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is not clickable after "+timeoutInSeconds+" seconds.");
 		}
 		return clickable;
 	}

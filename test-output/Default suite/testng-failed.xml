@@ -3,16 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tdd.orangehrm.testcase.LoginPageTest">
+      <class name="com.tdd.orangehrm.testcase.PIMPageTest">
         <methods>
+          <include name="afterClass"/>
+          <include name="createEmployee"/>
           <include name="tearDown"/>
+          <include name="afterTest"/>
           <include name="setup"/>
-          <include name="verifyLogo"/>
-          <include name="objectDeclaration"/>
-          <include name="loginIntoApplicationValidCred"/>
-          <include name="loginIntoAppplicationInvalidCred"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.tdd.orangehrm.testcase.LoginPageTest -->
+      </class> <!-- com.tdd.orangehrm.testcase.PIMPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

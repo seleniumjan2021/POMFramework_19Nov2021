@@ -23,37 +23,35 @@ public class ExtentListener extends TestBase implements ITestListener{
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-//		testListener = extentListener.createTest(result.getMethod().getMethodName());
-//		extentTestListener.set(testListener);
-//		extentTestListener.get().log(Status.INFO, result.getName() + "started..");
-//		Reporter.log(result.getMethod().getMethodName() +"Started...");
+		testListener = extentListener.createTest(result.getMethod().getMethodName());
+		extentTestListener.set(testListener);
+		extentTestListener.get().log(Status.INFO, result.getName() + "started..");
+		Reporter.log(result.getMethod().getMethodName() +"Started...");
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-//		extentTestListener.get().log(Status.INFO, result.getName() + " Test Passed..");
-//		Reporter.log(result.getMethod().getMethodName() +" Test Passed...");
+		extentTestListener.get().log(Status.INFO, result.getName() + " Test Passed..");
+		Reporter.log(result.getMethod().getMethodName() +" Test Passed...");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-//		extentTestListener.get().log(Status.INFO, result.getName() + "Test Failed..");
-//		extentTestListener.get().generateLog(Status.FAIL, (Markup) result.getThrowable());
-//		try {
-//			
-//			extentTestListener.get().addScreenCaptureFromPath(takeScreenShotOnFailure(result.getMethod().getMethodName(),driver));
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		Reporter.log(result.getMethod().getMethodName() +" Test Failed..." +result.getThrowable());
+		extentTestListener.get().log(Status.INFO, result.getName() + "Test Failed..");
+		//extentTestListener.get().generateLog(Status.FAIL,(Markup) result.getThrowable());
+		try {
+			extentTestListener.get().addScreenCaptureFromPath(takeScreenShotOnFailure(result.getMethod().getMethodName(),driver));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Reporter.log(result.getMethod().getMethodName() +" Test Failed..." +result.getThrowable());
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-//		extentTestListener.get().log(Status.INFO, result.getName() + "Test Skipped.." +result.getThrowable());
-//		Reporter.log(result.getMethod().getMethodName() +" Test Skipped..." +result.getThrowable());
-//		
+		extentTestListener.get().log(Status.INFO, result.getName() + "Test Skipped.." +result.getThrowable());
+		Reporter.log(result.getMethod().getMethodName() +" Test Skipped..." +result.getThrowable());		
 	}
 
 	@Override

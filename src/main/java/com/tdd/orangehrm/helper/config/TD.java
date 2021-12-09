@@ -13,4 +13,9 @@ public class TD {
 	//Invalid Credential
 	public static final String invalidPassword = "@$#%$^%&^";
 	
+	//Employee Details
+	public static String fName = "Sufiyan";
+	public static String lName = "Ansari";
+	public static String empCode = "SA0121";
+	
 }

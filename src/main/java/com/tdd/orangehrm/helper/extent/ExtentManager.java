@@ -53,7 +53,7 @@ public class ExtentManager {
 		extent.setSystemInfo("Environment" ,"Production");
 		extent.setSystemInfo("Author", "Ashutosh Kumar");
 		extent.setSystemInfo("Java Version", "JDK 8");
-		report.config().setTheme(Theme.STANDARD);
+		report.config().setTheme(Theme.DARK);
 		report.config().setEncoding("utf-8");
 		extent.attachReporter(report);
 		return extent;

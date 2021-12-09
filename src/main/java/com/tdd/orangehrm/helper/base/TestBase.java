@@ -17,6 +17,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -60,15 +61,6 @@ public class TestBase {
 			log.info("Screenshots :" +ResourceHelper.getScreenshotPath());
 			log.info("Properties: "+ResourceHelper.getPropertiesFilePath());
 		}
-		
-		driver = brow.getDriver();
-		log.info("Driver initialization......");
-		driver.get((String) brow.getConfigProperty().get("URL"));
-		log.info("Application Launch successfully");
-		driver.manage().window().maximize();
-		log.info("Maximizing Window");
-		wait = new WaitHelper(driver);
-		wait.setImplicitWait(10, TimeUnit.SECONDS);
 		extent = ExtentManager.getReportInstance();
 	}
 	
@@ -94,10 +86,18 @@ public class TestBase {
 	@BeforeMethod
 	public void beforeClass(ITestResult result) {		
 		test = extent.createTest(getClass().getSimpleName()+": "+result.getMethod().getMethodName());
+		driver = brow.getDriver();
+		log.info("Driver initialization......");
+		wait = new WaitHelper(driver);
+		wait.setImplicitWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		log.info("Maximizing Browser..");
+		driver.get(brow.getConfigProperty().getProperty("URL"));
+		log.info("Launching URL......");
 	}
 	
-	@AfterClass
-	public void afterClass() {
+	@AfterTest
+	public void afterTest() {
 		extent.flush();
 	}
 	
@@ -122,10 +122,10 @@ public class TestBase {
 			log.error(result.getName()+ "throws an exception. Exception details " +e.toString());
 		}
 		finally {
-//			if(driver != null) {
-//				driver.quit();
-//				log.info("**** finally driver quit, after executing method :" + result.getMethod().getMethodName());
-//			}
+			if(driver != null) {
+				driver.quit();
+				log.info("**** finally driver quit, after executing method :" + result.getMethod().getMethodName());
+			}
 			log.info(result.getName() + "Finished...");
 		}
 		
@@ -167,5 +167,14 @@ public class TestBase {
 		test.addScreenCaptureFromPath(imagePath);
 	}
 	
+	public static void logInfoExtentReport(String msg) {
+		test.log(Status.INFO, msg);
+	}
+	public static void logFailExtentReport(String msg) {
+		test.log(Status.FAIL, msg);
+	}
+	public static void logPassExtentReport(String msg) {
+		test.log(Status.PASS, msg);
+	}
 	
 }

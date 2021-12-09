@@ -1,14 +1,15 @@
 package com.tdd.orangehrm.pages;
 
+import java.io.IOException;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import com.tdd.orangehrm.helper.base.TestBase;
+
 import com.tdd.orangehrm.helper.lib.Library;
 import com.tdd.orangehrm.helper.logger.LoggerHelper;
-import com.tdd.orangehrm.helper.wait.WaitHelper;
 
 public class LoginPage {
 	
@@ -53,6 +54,11 @@ public class LoginPage {
 		 lib.setValueOnElement(userNameField, username);
 		 lib.clearValueFromEditField(passwordField);
 		 lib.setValueOnElement(passwordField, password);
-		 lib.clickOnElement(loginBtn);
+		 try {
+			lib.clickOnElement(loginBtn);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
