@@ -17,6 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+@SuppressWarnings("deprecation")
 public class ExcelHelper {
 	public String path;
 	public FileInputStream fis = null;

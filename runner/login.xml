@@ -8,7 +8,7 @@
 		<parameter name="environment" value="production"></parameter>
 		<parameter name="appName" value="OrangeHRM"></parameter>
 		<classes>
-			<class name="com.tdd.orangehrm.testcase.LoginPageTest"></class>
+			<!-- <class name="com.tdd.orangehrm.testcase.LoginPageTest"></class> -->
 			<class name="com.tdd.orangehrm.testcase.PIMPageTest"></class>
 		</classes>
 	</test> <!-- Default test -->

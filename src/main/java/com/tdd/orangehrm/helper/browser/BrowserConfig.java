@@ -20,6 +20,7 @@ import com.tdd.orangehrm.helper.resources.ResourceHelper;
 
 public class BrowserConfig {
 
+	@SuppressWarnings("unused")
 	private static Logger log = LoggerHelper.getLogger(BrowserConfig.class);
 	public WebDriver driver;
 
