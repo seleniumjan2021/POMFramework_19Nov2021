@@ -10,7 +10,6 @@ import org.testng.Reporter;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.Markup;
 import com.tdd.orangehrm.helper.base.TestBase;
 import com.tdd.orangehrm.helper.extent.ExtentManager;
 
