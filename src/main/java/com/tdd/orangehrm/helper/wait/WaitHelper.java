@@ -1,5 +1,6 @@
 package com.tdd.orangehrm.helper.wait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
@@ -11,6 +12,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.tdd.orangehrm.helper.base.TestBase;
@@ -67,6 +69,7 @@ public class WaitHelper {
 		try {
 			log.info("waiting for : "+element+" : "+timeoutInSeconds + "seconds to be clickable");
 			WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+			wait.pollingEvery(Duration.ofMillis(200));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			TestBase.logInfoExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is clickable after "+timeoutInSeconds+" seconds.");
 			return element.isDisplayed();
@@ -74,7 +77,28 @@ public class WaitHelper {
 		 log.info(element.toString() + "element is not clickable after "+timeoutInSeconds+" seconds." );
 		 TestBase.logFailExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is not clickable after "+timeoutInSeconds+" seconds.");
 		}
-		return clickable;
+		return clickable; 
 	}
 	
+	public boolean waitForElementVisible(WebElement element , int timeoutInSeconds , int pollingEveryMilliSecond) {
+		boolean display = false;
+		try {
+			FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+			.ignoring(NoSuchElementException.class)
+			.ignoring(NoSuchFrameException.class)
+			.ignoring(ElementNotVisibleException.class)
+			.ignoring(StaleElementReferenceException.class)
+			.ignoring(NoSuchWindowException.class)
+			.withTimeout(Duration.ofSeconds(timeoutInSeconds))
+			.pollingEvery(Duration.ofMillis(pollingEveryMilliSecond));
+			wait.until(ExpectedConditions.visibilityOf(element));
+			TestBase.logInfoExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is visible after "+timeoutInSeconds+" seconds.");
+			return element.isDisplayed();	
+		}catch (Exception e) {
+		 
+			log.info(element.toString() + "element is not visible after "+timeoutInSeconds+" seconds." );
+			TestBase.logFailExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is not visible after "+timeoutInSeconds+" seconds.");
+		}
+		return display;
+	}
 }

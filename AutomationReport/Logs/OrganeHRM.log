@@ -1,87 +1,130 @@
-2021-12-09 22:24:24 INFO  TestBase:58 - Before Suite Exceution Enviroment: production
- 2021-12-09 22:24:24 INFO  TestBase:59 - Project path is : /Users/ashu/eclipse-workspace/OrangeHRM/
- 2021-12-09 22:24:24 INFO  TestBase:60 - Automation Reports: /Users/ashu/eclipse-workspace/OrangeHRM/AutomationReport/
- 2021-12-09 22:24:24 INFO  TestBase:61 - Screenshots :/Users/ashu/eclipse-workspace/OrangeHRM/screenshot/
- 2021-12-09 22:24:24 INFO  TestBase:62 - Properties: /Users/ashu/eclipse-workspace/OrangeHRM/src/test/resources/propertiesFile/
- 2021-12-09 22:24:29 INFO  TestBase:90 - Driver initialization......
- 2021-12-09 22:24:29 INFO  WaitHelper:30 - Implicit wait has been set to: 10
- 2021-12-09 22:24:30 INFO  TestBase:94 - Maximizing Browser..
- 2021-12-09 22:24:35 INFO  TestBase:96 - Launching URL......
- 2021-12-09 22:24:35 INFO  Library:59 - [[ChromeDriver: chrome on MAC (e96ddbea540ae23a35ee13273a1af61d)] -> id: txtUsername] value is cleared.
- 2021-12-09 22:24:36 INFO  Library:44 - Admin value set to [[ChromeDriver: chrome on MAC (e96ddbea540ae23a35ee13273a1af61d)] -> id: txtUsername]
- 2021-12-09 22:24:36 INFO  Library:59 - [[ChromeDriver: chrome on MAC (e96ddbea540ae23a35ee13273a1af61d)] -> id: txtPassword] value is cleared.
- 2021-12-09 22:24:36 INFO  Library:44 - admin123 value set to [[ChromeDriver: chrome on MAC (e96ddbea540ae23a35ee13273a1af61d)] -> id: txtPassword]
- 2021-12-09 22:24:51 INFO  Library:28 - Proxy element for: DefaultElementLocator 'By.id: btnLogin' got clicked.
- 2021-12-09 22:25:02 INFO  Library:28 - [[ChromeDriver: chrome on MAC (e96ddbea540ae23a35ee13273a1af61d)] -> id: welcome] got clicked.
- 2021-12-09 22:25:14 INFO  Library:28 - Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(@href,'logout')]' got clicked.
- 2021-12-09 22:25:24 INFO  TestBase:113 - loginIntoApplicationValidCredTest Passed...
- 2021-12-09 22:25:24 INFO  TestBase:127 - **** finally driver quit, after executing method :loginIntoApplicationValidCred
- 2021-12-09 22:25:24 INFO  TestBase:129 - loginIntoApplicationValidCredFinished...
- 2021-12-09 22:25:27 INFO  TestBase:90 - Driver initialization......
- 2021-12-09 22:25:27 INFO  WaitHelper:30 - Implicit wait has been set to: 10
- 2021-12-09 22:25:27 INFO  TestBase:94 - Maximizing Browser..
- 2021-12-09 22:25:32 INFO  TestBase:96 - Launching URL......
- 2021-12-09 22:25:32 INFO  Library:59 - [[ChromeDriver: chrome on MAC (86fb0e79546685260131e962326fdc38)] -> id: txtUsername] value is cleared.
- 2021-12-09 22:25:33 INFO  Library:44 - Admin value set to [[ChromeDriver: chrome on MAC (86fb0e79546685260131e962326fdc38)] -> id: txtUsername]
- 2021-12-09 22:25:33 INFO  Library:59 - [[ChromeDriver: chrome on MAC (86fb0e79546685260131e962326fdc38)] -> id: txtPassword] value is cleared.
- 2021-12-09 22:25:33 INFO  Library:44 - @$#%$^%&^ value set to [[ChromeDriver: chrome on MAC (86fb0e79546685260131e962326fdc38)] -> id: txtPassword]
- 2021-12-09 22:25:35 INFO  Library:28 - [[ChromeDriver: chrome on MAC (86fb0e79546685260131e962326fdc38)] -> id: btnLogin] got clicked.
- 2021-12-09 22:25:35 INFO  TestBase:113 - loginIntoAppplicationInvalidCredTest Passed...
- 2021-12-09 22:25:36 INFO  TestBase:127 - **** finally driver quit, after executing method :loginIntoAppplicationInvalidCred
- 2021-12-09 22:25:36 INFO  TestBase:129 - loginIntoAppplicationInvalidCredFinished...
- 2021-12-09 22:25:38 INFO  TestBase:90 - Driver initialization......
- 2021-12-09 22:25:38 INFO  WaitHelper:30 - Implicit wait has been set to: 10
- 2021-12-09 22:25:39 INFO  TestBase:94 - Maximizing Browser..
- 2021-12-09 22:25:43 INFO  TestBase:96 - Launching URL......
- 2021-12-09 22:25:53 INFO  TestBase:113 - verifyForgetPasswordTest Passed...
- 2021-12-09 22:25:53 INFO  TestBase:127 - **** finally driver quit, after executing method :verifyForgetPassword
- 2021-12-09 22:25:53 INFO  TestBase:129 - verifyForgetPasswordFinished...
- 2021-12-09 22:25:56 INFO  TestBase:90 - Driver initialization......
- 2021-12-09 22:25:56 INFO  WaitHelper:30 - Implicit wait has been set to: 10
- 2021-12-09 22:25:57 INFO  TestBase:94 - Maximizing Browser..
- 2021-12-09 22:26:02 INFO  TestBase:96 - Launching URL......
- 2021-12-09 22:26:02 INFO  TestBase:113 - verifyLogoTest Passed...
- 2021-12-09 22:26:02 INFO  TestBase:127 - **** finally driver quit, after executing method :verifyLogo
- 2021-12-09 22:26:02 INFO  TestBase:129 - verifyLogoFinished...
- 2021-12-09 22:26:05 INFO  TestBase:90 - Driver initialization......
- 2021-12-09 22:26:05 INFO  WaitHelper:30 - Implicit wait has been set to: 10
- 2021-12-09 22:26:05 INFO  TestBase:94 - Maximizing Browser..
- 2021-12-09 22:26:10 INFO  TestBase:96 - Launching URL......
- 2021-12-09 22:26:10 INFO  Library:59 - [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: txtUsername] value is cleared.
- 2021-12-09 22:26:10 INFO  Library:44 - Admin value set to [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: txtUsername]
- 2021-12-09 22:26:10 INFO  Library:59 - [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: txtPassword] value is cleared.
- 2021-12-09 22:26:11 INFO  Library:44 - admin123 value set to [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: txtPassword]
- 2021-12-09 22:26:26 INFO  Library:28 - Proxy element for: DefaultElementLocator 'By.id: btnLogin' got clicked.
- 2021-12-09 22:26:36 INFO  Library:72 - Move hovering to the element : [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: menu_pim_viewPimModule] successful
- 2021-12-09 22:26:37 INFO  Library:28 - [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: menu_pim_addEmployee] got clicked.
- 2021-12-09 22:26:40 INFO  Library:59 - [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: firstName] value is cleared.
- 2021-12-09 22:26:40 INFO  Library:44 - Sufiyan value set to [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: firstName]
- 2021-12-09 22:26:40 INFO  Library:59 - [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: lastName] value is cleared.
- 2021-12-09 22:26:40 INFO  Library:44 - Ansari value set to [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: lastName]
- 2021-12-09 22:26:41 INFO  Library:59 - [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: employeeId] value is cleared.
- 2021-12-09 22:26:41 INFO  Library:44 - SA0121 value set to [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: employeeId]
- 2021-12-09 22:26:41 INFO  Library:44 - /Users/ashu/eclipse-workspace/OrangeHRM/src/test/resources/tony.jpeg value set to [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: photofile]
- 2021-12-09 22:26:47 INFO  Library:28 - [[ChromeDriver: chrome on MAC (4f92756310486da2584141bd8d5dcfb3)] -> id: btnSave] got clicked.
- 2021-12-09 22:26:49 INFO  TestBase:109 - createEmployeeTest Failed...
- 2021-12-09 22:26:52 INFO  TestBase:127 - **** finally driver quit, after executing method :createEmployee
- 2021-12-09 22:26:52 INFO  TestBase:129 - createEmployeeFinished...
- 2021-12-09 22:26:55 INFO  TestBase:90 - Driver initialization......
- 2021-12-09 22:26:55 INFO  WaitHelper:30 - Implicit wait has been set to: 10
- 2021-12-09 22:26:56 INFO  TestBase:94 - Maximizing Browser..
- 2021-12-09 22:27:01 INFO  TestBase:96 - Launching URL......
- 2021-12-09 22:27:01 INFO  Library:59 - [[ChromeDriver: chrome on MAC (d6e3f156b8836ff12c0f8ddeb55dc8ca)] -> id: txtUsername] value is cleared.
- 2021-12-09 22:27:01 INFO  Library:44 - Admin value set to [[ChromeDriver: chrome on MAC (d6e3f156b8836ff12c0f8ddeb55dc8ca)] -> id: txtUsername]
- 2021-12-09 22:27:01 INFO  Library:59 - [[ChromeDriver: chrome on MAC (d6e3f156b8836ff12c0f8ddeb55dc8ca)] -> id: txtPassword] value is cleared.
- 2021-12-09 22:27:02 INFO  Library:44 - admin123 value set to [[ChromeDriver: chrome on MAC (d6e3f156b8836ff12c0f8ddeb55dc8ca)] -> id: txtPassword]
- 2021-12-09 22:27:17 INFO  Library:28 - Proxy element for: DefaultElementLocator 'By.id: btnLogin' got clicked.
- 2021-12-09 22:27:27 INFO  Library:72 - Move hovering to the element : [[ChromeDriver: chrome on MAC (d6e3f156b8836ff12c0f8ddeb55dc8ca)] -> id: menu_pim_viewPimModule] successful
- 2021-12-09 22:27:29 INFO  Library:28 - [[ChromeDriver: chrome on MAC (d6e3f156b8836ff12c0f8ddeb55dc8ca)] -> id: menu_pim_addEmployee] got clicked.
- 2021-12-09 22:27:29 INFO  TestBase:113 - navigateToAddEmployeeTest Passed...
- 2021-12-09 22:27:29 INFO  TestBase:127 - **** finally driver quit, after executing method :navigateToAddEmployee
- 2021-12-09 22:27:29 INFO  TestBase:129 - navigateToAddEmployeeFinished...
- 2021-12-09 22:27:31 INFO  TestBase:75 - Execution completed on Enviroment: production
- 2021-12-09 22:27:31 INFO  TestBase:76 - Project path is : /Users/ashu/eclipse-workspace/OrangeHRM/
- 2021-12-09 22:27:31 INFO  TestBase:77 - Automation Reports generated on : /Users/ashu/eclipse-workspace/OrangeHRM/AutomationReport/
- 2021-12-09 22:27:31 INFO  TestBase:78 - Image available on :/Users/ashu/eclipse-workspace/OrangeHRM/screenshot/
- 2021-12-09 22:27:31 INFO  TestBase:82 - Browser is closing....
- 
+2021-12-16 21:05:22,227  INFO [main] TestBase:56 - Before Suite Exceution Enviroment: production
+2021-12-16 21:05:22,230  INFO [main] TestBase:57 - Project path is : /Users/ashu/POMFramework_19Nov2021/
+2021-12-16 21:05:22,231  INFO [main] TestBase:58 - Automation Reports: /Users/ashu/POMFramework_19Nov2021/AutomationReport/
+2021-12-16 21:05:22,232  INFO [main] TestBase:59 - Screenshots :/Users/ashu/POMFramework_19Nov2021/screenshot/
+2021-12-16 21:05:22,233  INFO [main] TestBase:60 - Properties: /Users/ashu/POMFramework_19Nov2021/src/test/resources/propertiesFile/
+2021-12-16 21:05:26,500  INFO [main] TestBase:88 - Driver initialization......
+2021-12-16 21:05:26,529  INFO [main] WaitHelper:32 - Implicit wait has been set to: 10
+2021-12-16 21:05:26,704  INFO [main] TestBase:92 - Maximizing Browser..
+2021-12-16 21:05:30,293  INFO [main] TestBase:94 - Launching URL......
+2021-12-16 21:05:30,519  INFO [main] Library:59 - [[ChromeDriver: chrome on MAC (bc14bee5bd3cf5e44815ca04450469ac)] -> id: txtUsername] value is cleared.
+2021-12-16 21:05:30,850  INFO [main] Library:44 - Admin value set to [[ChromeDriver: chrome on MAC (bc14bee5bd3cf5e44815ca04450469ac)] -> id: txtUsername]
+2021-12-16 21:05:31,050  INFO [main] Library:59 - [[ChromeDriver: chrome on MAC (bc14bee5bd3cf5e44815ca04450469ac)] -> id: txtPassword] value is cleared.
+2021-12-16 21:05:31,211  INFO [main] Library:44 - admin123 value set to [[ChromeDriver: chrome on MAC (bc14bee5bd3cf5e44815ca04450469ac)] -> id: txtPassword]
+2021-12-16 21:05:46,633  INFO [main] Library:28 - Proxy element for: DefaultElementLocator 'By.id: btnLogin' got clicked.
+2021-12-16 21:05:57,122  INFO [main] Library:28 - [[ChromeDriver: chrome on MAC (bc14bee5bd3cf5e44815ca04450469ac)] -> id: welcome] got clicked.
+2021-12-16 21:06:09,086  INFO [main] Library:28 - Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(@href,'logout')]' got clicked.
+2021-12-16 21:06:19,138  INFO [main] TestBase:111 - loginIntoApplicationValidCredTest Passed...
+2021-12-16 21:06:19,361  INFO [main] TestBase:125 - **** finally driver quit, after executing method :loginIntoApplicationValidCred
+2021-12-16 21:06:19,361  INFO [main] TestBase:127 - loginIntoApplicationValidCredFinished...
+2021-12-16 21:06:19,548 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/spark.spa.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:19,553 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/spark.spa_en_GB.ftl"): Not found
+2021-12-16 21:06:19,558 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/spark.spa_en.ftl"): Not found
+2021-12-16 21:06:19,563 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/spark.spa.ftl"): Found
+2021-12-16 21:06:19,565 DEBUG [main] cache:45 - Loading template for "spark/spark.spa.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/spark.spa.ftl"
+2021-12-16 21:06:20,139 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-variables.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,140 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables_en_GB.ftl"): Not found
+2021-12-16 21:06:20,141 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
+2021-12-16 21:06:20,142 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
+2021-12-16 21:06:20,145 DEBUG [main] cache:45 - Loading template for "commons/commons-variables.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/commons/commons-variables.ftl"
+2021-12-16 21:06:20,511 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-macros.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,512 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-macros_en_GB.ftl"): Not found
+2021-12-16 21:06:20,513 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
+2021-12-16 21:06:20,515 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
+2021-12-16 21:06:20,517 DEBUG [main] cache:45 - Loading template for "commons/commons-macros.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/commons/commons-macros.ftl"
+2021-12-16 21:06:20,570 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/macros/attributes.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,573 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/attributes_en_GB.ftl"): Not found
+2021-12-16 21:06:20,577 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
+2021-12-16 21:06:20,578 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
+2021-12-16 21:06:20,579 DEBUG [main] cache:45 - Loading template for "spark/macros/attributes.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/macros/attributes.ftl"
+2021-12-16 21:06:20,582 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/macros/log.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,583 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/log_en_GB.ftl"): Not found
+2021-12-16 21:06:20,585 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
+2021-12-16 21:06:20,586 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
+2021-12-16 21:06:20,587 DEBUG [main] cache:45 - Loading template for "spark/macros/log.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/macros/log.ftl"
+2021-12-16 21:06:20,615 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,616 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en_GB.ftl"): Not found
+2021-12-16 21:06:20,617 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
+2021-12-16 21:06:20,619 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
+2021-12-16 21:06:20,620 DEBUG [main] cache:45 - Loading template for "spark/macros/recurse_nodes.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/macros/recurse_nodes.ftl"
+2021-12-16 21:06:20,680 DEBUG [main] cache:45 - "spark/macros/log.ftl"("en_GB", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-12-16 21:06:20,681 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/macros/attr-common.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,682 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/attr-common_en_GB.ftl"): Not found
+2021-12-16 21:06:20,687 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/attr-common_en.ftl"): Not found
+2021-12-16 21:06:20,690 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/attr-common.ftl"): Found
+2021-12-16 21:06:20,691 DEBUG [main] cache:45 - Loading template for "spark/macros/attr-common.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/macros/attr-common.ftl"
+2021-12-16 21:06:20,717 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/head.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,717 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head_en_GB.ftl"): Not found
+2021-12-16 21:06:20,718 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
+2021-12-16 21:06:20,719 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
+2021-12-16 21:06:20,720 DEBUG [main] cache:45 - Loading template for "spark/partials/head.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/head.ftl"
+2021-12-16 21:06:20,728 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,729 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css_en_GB.ftl"): Not found
+2021-12-16 21:06:20,730 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
+2021-12-16 21:06:20,731 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
+2021-12-16 21:06:20,732 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-css.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/commons/commons-inject-css.ftl"
+2021-12-16 21:06:20,733 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/navbar.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,734 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar_en_GB.ftl"): Not found
+2021-12-16 21:06:20,735 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
+2021-12-16 21:06:20,738 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
+2021-12-16 21:06:20,738 DEBUG [main] cache:45 - Loading template for "spark/partials/navbar.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/navbar.ftl"
+2021-12-16 21:06:20,751 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,753 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav_en_GB.ftl"): Not found
+2021-12-16 21:06:20,753 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
+2021-12-16 21:06:20,755 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
+2021-12-16 21:06:20,755 DEBUG [main] cache:45 - Loading template for "spark/partials/sidenav.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/sidenav.ftl"
+2021-12-16 21:06:20,782 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/test.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,785 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/test_en_GB.ftl"): Not found
+2021-12-16 21:06:20,786 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/test_en.ftl"): Not found
+2021-12-16 21:06:20,789 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/test.ftl"): Found
+2021-12-16 21:06:20,789 DEBUG [main] cache:45 - Loading template for "spark/partials/test.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/test.ftl"
+2021-12-16 21:06:20,822 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/standard-content.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,823 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/standard-content_en_GB.ftl"): Not found
+2021-12-16 21:06:20,826 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
+2021-12-16 21:06:20,827 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
+2021-12-16 21:06:20,828 DEBUG [main] cache:45 - Loading template for "spark/partials/standard-content.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/standard-content.ftl"
+2021-12-16 21:06:20,862 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/exception.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,867 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/exception_en_GB.ftl"): Not found
+2021-12-16 21:06:20,868 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/exception_en.ftl"): Not found
+2021-12-16 21:06:20,868 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/exception.ftl"): Found
+2021-12-16 21:06:20,869 DEBUG [main] cache:45 - Loading template for "spark/partials/exception.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/exception.ftl"
+2021-12-16 21:06:20,871 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/category.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,876 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/category_en_GB.ftl"): Not found
+2021-12-16 21:06:20,890 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/category_en.ftl"): Not found
+2021-12-16 21:06:20,891 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/category.ftl"): Found
+2021-12-16 21:06:20,900 DEBUG [main] cache:45 - Loading template for "spark/partials/category.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/category.ftl"
+2021-12-16 21:06:20,906 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/device.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,907 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/device_en_GB.ftl"): Not found
+2021-12-16 21:06:20,908 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/device_en.ftl"): Not found
+2021-12-16 21:06:20,911 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/device.ftl"): Found
+2021-12-16 21:06:20,912 DEBUG [main] cache:45 - Loading template for "spark/partials/device.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/device.ftl"
+2021-12-16 21:06:20,915 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/author.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,916 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/author_en_GB.ftl"): Not found
+2021-12-16 21:06:20,918 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/author_en.ftl"): Not found
+2021-12-16 21:06:20,937 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/author.ftl"): Found
+2021-12-16 21:06:20,938 DEBUG [main] cache:45 - Loading template for "spark/partials/author.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/author.ftl"
+2021-12-16 21:06:20,940 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/log.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,941 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/log_en_GB.ftl"): Not found
+2021-12-16 21:06:20,942 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/log_en.ftl"): Not found
+2021-12-16 21:06:20,942 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/log.ftl"): Found
+2021-12-16 21:06:20,943 DEBUG [main] cache:45 - Loading template for "spark/partials/log.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/log.ftl"
+2021-12-16 21:06:20,957 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/dashboard.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:20,959 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/dashboard_en_GB.ftl"): Not found
+2021-12-16 21:06:20,960 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/dashboard_en.ftl"): Not found
+2021-12-16 21:06:20,962 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/dashboard.ftl"): Found
+2021-12-16 21:06:20,962 DEBUG [main] cache:45 - Loading template for "spark/partials/dashboard.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/dashboard.ftl"
+2021-12-16 21:06:21,164 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/scripts.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:21,167 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts_en_GB.ftl"): Not found
+2021-12-16 21:06:21,179 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
+2021-12-16 21:06:21,180 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
+2021-12-16 21:06:21,180 DEBUG [main] cache:45 - Loading template for "spark/partials/scripts.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/spark/partials/scripts.ftl"
+2021-12-16 21:06:21,208 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en_GB", UTF-8, parsed); will try to load it.
+2021-12-16 21:06:21,210 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en_GB.ftl"): Not found
+2021-12-16 21:06:21,212 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
+2021-12-16 21:06:21,214 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
+2021-12-16 21:06:21,215 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-js.ftl"("en_GB", UTF-8, parsed) from "jar:file:/Users/ashu/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
+2021-12-16 21:06:21,470  INFO [main] TestBase:73 - Execution completed on Enviroment: production
+2021-12-16 21:06:21,470  INFO [main] TestBase:74 - Project path is : /Users/ashu/POMFramework_19Nov2021/
+2021-12-16 21:06:21,471  INFO [main] TestBase:75 - Automation Reports generated on : /Users/ashu/POMFramework_19Nov2021/AutomationReport/
+2021-12-16 21:06:21,472  INFO [main] TestBase:76 - Image available on :/Users/ashu/POMFramework_19Nov2021/screenshot/
+2021-12-16 21:06:21,472  INFO [main] TestBase:80 - Browser is closing....
