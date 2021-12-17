@@ -87,7 +87,7 @@ public class PIMPageTest extends TestBase {
 			soft.assertTrue(status);
 		}
 		
-		//soft.assertAll();	
+		soft.assertAll();	
 		
        //Steps for Deletion of an that Employee which has been created. TC Complete
 	}
