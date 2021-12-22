@@ -52,13 +52,13 @@ public class PIMPageTest extends TestBase {
 			e.printStackTrace();
 		}
 		status = wait.waitForElementVisible(pim.firstNameLabel, 1);
-		soft.assertEquals(status, "First Name Field Label is not visible");
+		soft.assertTrue(status, "First Name Field Label is not visible");
 		status = wait.waitForElementVisible(pim.employeeIdLabel, 1);
-		soft.assertEquals(status, "EmployeeID Label is not visible");
+		soft.assertTrue(status, "EmployeeID Label is not visible");
 		status = wait.waitForElementVisible(pim.photographLabel, 1);
-		soft.assertEquals(status, "Photograph Label is not visible");
+		soft.assertTrue(status, "Photograph Label is not visible");
 		status = wait.waitForElementVisible(pim.createLoginDetailLabel, 1);
-		soft.assertEquals(status, "Create Login Detail Label is not visible");
+		soft.assertTrue(status, "Create Login Detail Label is not visible");
 		lib.clearValueFromEditField(pim.firstName);
 		lib.setValueOnElement(pim.firstName, TD.fName);
 		lib.clearValueFromEditField(pim.lastName);
@@ -87,7 +87,7 @@ public class PIMPageTest extends TestBase {
 			soft.assertTrue(status);
 		}
 		
-		//soft.assertAll();	
+		soft.assertAll();	
 		
        //Steps for Deletion of an that Employee which has been created. TC Complete
 	}
