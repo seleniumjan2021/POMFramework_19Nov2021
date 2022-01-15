@@ -2,6 +2,8 @@ package com.tdd.orangehrm.helper.config;
 
 public class TD {
 	
+	//LoginPage
+	public static final String pageTitle = "OrangeHRM";
 	//Waits
 	public static final int standardWait = 5;
 	public static final int explicitWait = 15;
@@ -13,6 +15,7 @@ public class TD {
 	
 	//Invalid Credential
 	public static final String invalidPassword = "@$#%$^%&^";
+	
 	
 	//Employee Details
 	public static String fName = "Sufiyan";

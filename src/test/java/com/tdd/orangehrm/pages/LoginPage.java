@@ -48,6 +48,12 @@ public class LoginPage {
 	@FindBy(xpath = "//span[contains(text(),'Invalid')]")
 	public WebElement invalidPassMsg;
 	
+	@FindBy(xpath = "//*[@id='footer']/div[1]")
+	public WebElement copyrights;
+	
+	@FindBy(id = "social-icons")
+	public WebElement socialLink;
+	
 	//Methods of LoginPage
 	public void loginOrganeHRM(String username , String password){
 		 lib.clearValueFromEditField(userNameField);

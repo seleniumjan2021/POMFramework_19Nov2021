@@ -42,14 +42,15 @@ public class WaitHelper {
 	public boolean waitForElementVisible(WebElement element , int timeoutInSeconds) {
 		boolean display = false;
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
-			wait.ignoring(NoSuchElementException.class);
-			wait.ignoring(NoSuchFrameException.class);
-			wait.ignoring(ElementNotVisibleException.class);
-			wait.ignoring(StaleElementReferenceException.class);
-			wait.ignoring(NoSuchWindowException.class);
-			wait.until(ExpectedConditions.visibilityOf(element));
-			TestBase.logInfoExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "element is visible after "+timeoutInSeconds+" seconds.");
+//			WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+//			wait.ignoring(NoSuchElementException.class);
+//			wait.ignoring(NoSuchFrameException.class);
+//			wait.ignoring(ElementNotVisibleException.class);
+//			wait.ignoring(StaleElementReferenceException.class);
+//			wait.ignoring(NoSuchWindowException.class);
+//			wait.until(ExpectedConditions.visibilityOf(element));
+			driver.manage().timeouts().implicitlyWait(timeoutInSeconds, TimeUnit.SECONDS);
+			TestBase.logInfoExtentReport("In Class " +getClass().getSimpleName()+ " " +element.getText() + "element is visible after "+timeoutInSeconds+" seconds.");
 			return element.isDisplayed();	
 		}catch (Exception e) {
 		 
