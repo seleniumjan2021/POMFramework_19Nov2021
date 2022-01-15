@@ -40,7 +40,7 @@ public class LoginPageTest extends TestBase {
 		objectDeclaration();
 		login.loginOrganeHRM(brow.getConfigProperty().getProperty("admin_user"),
 				brow.getConfigProperty().getProperty("admin_password"));
-		status = wait.waitForElementVisible(login.welcome, TD.oneSecWait, 500);
+		status = wait.waitForElementVisible(login.welcome, TD.oneSecWait);
 		Assert.assertTrue(status, "Failed!! Login");
 		try {
 			lib.clickOnElement(login.welcome);
@@ -55,7 +55,7 @@ public class LoginPageTest extends TestBase {
 	public void loginIntoAppplicationInvalidCred() {
 		objectDeclaration();
 		login.loginOrganeHRM(TD.adminUsername, TD.invalidPassword);
-		if (wait.waitForElementVisible(login.invalidPassMsg, TD.standardWait, 500)) {
+		if (wait.waitForElementVisible(login.invalidPassMsg, TD.standardWait)) {
 			String invalidMessge = login.invalidPassMsg.getText();
 			Assert.assertEquals(invalidMessge, "Invalid credentials");
 		} else {

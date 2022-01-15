@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
     <line>
       <![CDATA[loginIntoApplicationValidCredStarted...]]>
@@ -7,24 +7,54 @@
     <line>
       <![CDATA[loginIntoApplicationValidCred Test Passed...]]>
     </line>
+    <line>
+      <![CDATA[loginIntoAppplicationInvalidCredStarted...]]>
+    </line>
+    <line>
+      <![CDATA[loginIntoAppplicationInvalidCred Test Passed...]]>
+    </line>
+    <line>
+      <![CDATA[verifyForgetPasswordStarted...]]>
+    </line>
+    <line>
+      <![CDATA[verifyForgetPassword Test Passed...]]>
+    </line>
+    <line>
+      <![CDATA[verifyLogoStarted...]]>
+    </line>
+    <line>
+      <![CDATA[verifyLogo Test Passed...]]>
+    </line>
+    <line>
+      <![CDATA[verifyPageTitleStarted...]]>
+    </line>
+    <line>
+      <![CDATA[verifyPageTitle Test Passed...]]>
+    </line>
+    <line>
+      <![CDATA[verifySocialLinksAreNotBrokenStarted...]]>
+    </line>
+    <line>
+      <![CDATA[verifySocialLinksAreNotBroken Test Passed...]]>
+    </line>
   </reporter-output>
-  <suite name="LoginTest suite" duration-ms="58987" started-at="2021-12-16T15:35:22Z" finished-at="2021-12-16T15:36:21Z">
+  <suite name="LoginTest suite" duration-ms="120357" started-at="2022-01-15T17:00:41Z" finished-at="2022-01-15T17:02:42Z">
     <groups>
     </groups>
-    <test name="Login test" duration-ms="58987" started-at="2021-12-16T15:35:22Z" finished-at="2021-12-16T15:36:21Z">
+    <test name="Login test" duration-ms="120357" started-at="2022-01-15T17:00:41Z" finished-at="2022-01-15T17:02:42Z">
       <class name="com.tdd.orangehrm.testcase.LoginPageTest">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="setup" is-config="true" duration-ms="59" started-at="2021-12-16T15:35:22Z" finished-at="2021-12-16T15:35:22Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="setup" is-config="true" duration-ms="23" started-at="2022-01-15T17:00:41Z" finished-at="2022-01-15T17:00:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@11963225]]>
+                <![CDATA[org.testng.TestRunner@47ec7422]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeClass(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="beforeClass" is-config="true" duration-ms="8014" started-at="2021-12-16T15:35:22Z" finished-at="2021-12-16T15:35:30Z">
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="beforeClass" is-config="true" duration-ms="10907" started-at="2022-01-15T17:00:42Z" finished-at="2022-01-15T17:00:52Z">
           <params>
             <param index="0">
               <value>
@@ -35,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="loginIntoApplicationValidCred()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="loginIntoApplicationValidCred" duration-ms="48840" started-at="2021-12-16T15:35:30Z" description="Login with valid credentials" finished-at="2021-12-16T15:36:19Z">
+        <test-method status="PASS" signature="loginIntoApplicationValidCred()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="loginIntoApplicationValidCred" duration-ms="30341" started-at="2022-01-15T17:00:52Z" description="Login with valid credentials" finished-at="2022-01-15T17:01:23Z">
           <reporter-output>
             <line>
               <![CDATA[loginIntoApplicationValidCredStarted...]]>
@@ -45,7 +75,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginIntoApplicationValidCred -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterMethod" is-config="true" duration-ms="224" started-at="2021-12-16T15:36:19Z" finished-at="2021-12-16T15:36:19Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterMethod" is-config="true" duration-ms="3195" started-at="2022-01-15T17:01:23Z" finished-at="2022-01-15T17:01:26Z">
           <params>
             <param index="0">
               <value>
@@ -56,15 +86,175 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterTest" is-config="true" duration-ms="1858" started-at="2021-12-16T15:36:19Z" finished-at="2021-12-16T15:36:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestContext)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="tearDown" is-config="true" duration-ms="2" started-at="2021-12-16T15:36:21Z" finished-at="2021-12-16T15:36:21Z">
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="beforeClass" is-config="true" duration-ms="9545" started-at="2022-01-15T17:01:26Z" finished-at="2022-01-15T17:01:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@11963225]]>
+                <![CDATA[[TestResult name=loginIntoAppplicationInvalidCred status=SUCCESS method=LoginPageTest.loginIntoAppplicationInvalidCred()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=loginIntoAppplicationInvalidCredStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="loginIntoAppplicationInvalidCred()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="loginIntoAppplicationInvalidCred" duration-ms="2930" started-at="2022-01-15T17:01:36Z" description="Login with Invalid Credentails" finished-at="2022-01-15T17:01:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[loginIntoAppplicationInvalidCredStarted...]]>
+            </line>
+            <line>
+              <![CDATA[loginIntoAppplicationInvalidCred Test Passed...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginIntoAppplicationInvalidCred -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterMethod" is-config="true" duration-ms="3156" started-at="2022-01-15T17:01:38Z" finished-at="2022-01-15T17:01:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginIntoAppplicationInvalidCred status=SUCCESS method=LoginPageTest.loginIntoAppplicationInvalidCred()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=loginIntoAppplicationInvalidCredStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="beforeClass" is-config="true" duration-ms="9493" started-at="2022-01-15T17:01:42Z" finished-at="2022-01-15T17:01:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyForgetPassword status=SUCCESS method=LoginPageTest.verifyForgetPassword()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=verifyForgetPasswordStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verifyForgetPassword()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="verifyForgetPassword" duration-ms="10067" started-at="2022-01-15T17:01:51Z" description="Verify Forget password link" finished-at="2022-01-15T17:02:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[verifyForgetPasswordStarted...]]>
+            </line>
+            <line>
+              <![CDATA[verifyForgetPassword Test Passed...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyForgetPassword -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterMethod" is-config="true" duration-ms="3195" started-at="2022-01-15T17:02:01Z" finished-at="2022-01-15T17:02:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyForgetPassword status=SUCCESS method=LoginPageTest.verifyForgetPassword()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=verifyForgetPasswordStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="beforeClass" is-config="true" duration-ms="7962" started-at="2022-01-15T17:02:04Z" finished-at="2022-01-15T17:02:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogo status=SUCCESS method=LoginPageTest.verifyLogo()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=verifyLogoStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verifyLogo()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="verifyLogo" duration-ms="211" started-at="2022-01-15T17:02:12Z" description="Application Logo Verification" finished-at="2022-01-15T17:02:13Z">
+          <reporter-output>
+            <line>
+              <![CDATA[verifyLogoStarted...]]>
+            </line>
+            <line>
+              <![CDATA[verifyLogo Test Passed...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyLogo -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterMethod" is-config="true" duration-ms="3154" started-at="2022-01-15T17:02:13Z" finished-at="2022-01-15T17:02:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogo status=SUCCESS method=LoginPageTest.verifyLogo()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=verifyLogoStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="beforeClass" is-config="true" duration-ms="8879" started-at="2022-01-15T17:02:16Z" finished-at="2022-01-15T17:02:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPageTitle status=SUCCESS method=LoginPageTest.verifyPageTitle()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=verifyPageTitleStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verifyPageTitle()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="verifyPageTitle" duration-ms="9" started-at="2022-01-15T17:02:25Z" description="Verify the Application Page Title" finished-at="2022-01-15T17:02:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[verifyPageTitleStarted...]]>
+            </line>
+            <line>
+              <![CDATA[verifyPageTitle Test Passed...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterMethod" is-config="true" duration-ms="3173" started-at="2022-01-15T17:02:25Z" finished-at="2022-01-15T17:02:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPageTitle status=SUCCESS method=LoginPageTest.verifyPageTitle()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=verifyPageTitleStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="beforeClass" is-config="true" duration-ms="8191" started-at="2022-01-15T17:02:28Z" finished-at="2022-01-15T17:02:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySocialLinksAreNotBroken status=SUCCESS method=LoginPageTest.verifySocialLinksAreNotBroken()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=verifySocialLinksAreNotBrokenStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verifySocialLinksAreNotBroken()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="verifySocialLinksAreNotBroken" duration-ms="1744" started-at="2022-01-15T17:02:36Z" description="Verify the social links are not broken! " finished-at="2022-01-15T17:02:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[verifySocialLinksAreNotBrokenStarted...]]>
+            </line>
+            <line>
+              <![CDATA[verifySocialLinksAreNotBroken Test Passed...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifySocialLinksAreNotBroken -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterMethod" is-config="true" duration-ms="3200" started-at="2022-01-15T17:02:38Z" finished-at="2022-01-15T17:02:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySocialLinksAreNotBroken status=SUCCESS method=LoginPageTest.verifySocialLinksAreNotBroken()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379] output=verifySocialLinksAreNotBrokenStarted...]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="afterTest" is-config="true" duration-ms="945" started-at="2022-01-15T17:02:41Z" finished-at="2022-01-15T17:02:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestContext)[pri:0, instance:com.tdd.orangehrm.testcase.LoginPageTest@5939a379]" name="tearDown" is-config="true" duration-ms="2" started-at="2022-01-15T17:02:42Z" finished-at="2022-01-15T17:02:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@47ec7422]]>
               </value>
             </param>
           </params>
