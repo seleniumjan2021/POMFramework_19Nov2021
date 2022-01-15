@@ -42,7 +42,7 @@ public class Library {
 		try {
 			element.sendKeys(vText);
 			log.info(vText + " value set to " +element.toString());
-			 TestBase.logInfoExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + " has set the value " +vText);
+			 TestBase.logInfoExtentReport("In Class " +getClass().getSimpleName()+ " " +element.getText() + " has set the value " +vText);
 		} catch (Exception e) {
 			log.info(vText + " value is not set to " +element.toString()+"Error: "+e.toString());
 			TestBase.logFailExtentReport("In Class " +getClass().getSimpleName()+ " " +element.toString() + "has not set the value :" +vText + "Error is :"+e.toString());

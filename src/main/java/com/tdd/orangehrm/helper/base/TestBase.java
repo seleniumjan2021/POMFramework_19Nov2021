@@ -100,7 +100,7 @@ public class TestBase {
 	}
 	
 	@AfterMethod
-	public void afterMethod(ITestResult result) {
+	public void afterMethod(ITestResult result) throws IOException {
 		
 		try {
 			if(result.getStatus() == ITestResult.FAILURE) {
@@ -121,7 +121,7 @@ public class TestBase {
 		}
 		finally {
 			if(driver != null) {
-				driver.quit();
+				Runtime.getRuntime().exec("taskkill /IM chromedriver.exe /F");
 				log.info("**** finally driver quit, after executing method :" + result.getMethod().getMethodName());
 			}
 			log.info(result.getName() + "Finished...");
