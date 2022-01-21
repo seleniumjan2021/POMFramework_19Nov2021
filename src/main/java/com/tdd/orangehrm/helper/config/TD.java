@@ -22,7 +22,5 @@ public class TD {
 	public static String lName = "Ansari";
 	public static String empCode = "SA0121";
 	
-	//File Paths
-	public static String profileImage = "/Users/ashu/eclipse-workspace/OrangeHRM/src/test/resources/images/tony.jpeg";
 	
 }

@@ -17,7 +17,7 @@
     <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
     <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory> -->
   </properties>
-
+	
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
@@ -78,6 +78,9 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>${project.basedir}/runner/${TestNGRunner}.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					<systemPropertyVariables>
+					     <browser>${Browser}</browser>
+					</systemPropertyVariables>
 				</configuration>	
 			</plugin>
 		</plugins>

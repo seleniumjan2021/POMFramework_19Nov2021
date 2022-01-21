@@ -11,6 +11,7 @@ import org.testng.asserts.SoftAssert;
 import com.tdd.orangehrm.helper.base.TestBase;
 import com.tdd.orangehrm.helper.config.TD;
 import com.tdd.orangehrm.helper.lib.Library;
+import com.tdd.orangehrm.helper.resources.ResourceHelper;
 import com.tdd.orangehrm.helper.wait.WaitHelper;
 import com.tdd.orangehrm.pages.HomePage;
 import com.tdd.orangehrm.pages.LoginPage;
@@ -65,7 +66,7 @@ public class PIMPageTest extends TestBase {
 		lib.setValueOnElement(pim.lastName, TD.lName);
 		lib.clearValueFromEditField(pim.empID);
 		lib.setValueOnElement(pim.empID, TD.empCode);
-		lib.setValueOnElement(pim.chooseFile, TD.profileImage);
+		lib.setValueOnElement(pim.chooseFile,ResourceHelper.getResourcePath()+"images/tony.jpeg");
 		lib.clickOnElement(pim.btnSave);
 		String name = pim.addEmployee_header.getText();
 		Assert.assertEquals(name, TD.fName+" "+TD.lName , "Failed to create employee");
