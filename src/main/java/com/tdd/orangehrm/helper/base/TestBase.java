@@ -19,6 +19,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -80,11 +81,11 @@ public class TestBase {
 			log.info("Browser is closing....");
 		}
 	}
-	
+	@Parameters("Browser")
 	@BeforeMethod
-	public void beforeClass(ITestResult result) {		
+	public void beforeClass(ITestResult result , String browserName) {		
 		test = extent.createTest(getClass().getSimpleName()+": "+result.getMethod().getMethodName());
-		driver = brow.getDriver();
+		driver = brow.getDriver(browserName);
 		log.info("Driver initialization......");
 		wait = new WaitHelper(driver);
 		wait.setImplicitWait(10, TimeUnit.SECONDS);

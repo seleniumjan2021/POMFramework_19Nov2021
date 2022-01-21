@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Parameters;
 
 import com.tdd.orangehrm.helper.logger.LoggerHelper;
 import com.tdd.orangehrm.helper.resources.ResourceHelper;
@@ -41,10 +42,11 @@ public class BrowserConfig {
 		return prop;
 	}
 
-	public WebDriver getDriver() {
+	
+	public WebDriver getDriver(String browserName) {
 
 		if (System.getProperty("os.name").toLowerCase().contains("mac")) {
-			if (getConfigProperty().get("browser").toString().contains("chrome")) {
+			if (browserName.contains("chrome")) {
 				System.setProperty("webdriver.chrome.driver",
 						ResourceHelper.getResourcePath() + "driver/chromedriver 2");
 				ChromeOptions option = new ChromeOptions();
@@ -56,7 +58,7 @@ public class BrowserConfig {
 				chrome.setJavascriptEnabled(true);
 				option.setCapability(ChromeOptions.CAPABILITY, chrome);
 				return new ChromeDriver(option);
-			} else if (getConfigProperty().get("browser").toString().contains("firefox")) {
+			} else if (browserName.contains("firefox")) {
 				System.setProperty("webdriver.gecko.driver", ResourceHelper.getResourcePath() + "driver/geckodriver 2");
 				DesiredCapabilities firefox = DesiredCapabilities.firefox();
 				FirefoxProfile profile = new FirefoxProfile();
@@ -68,7 +70,7 @@ public class BrowserConfig {
 				return new FirefoxDriver(firefoxOptions);
 			}
 		} else if (System.getProperty("os.name").toLowerCase().contains("windows")) {
-			if (getConfigProperty().get("browser").toString().contains("chrome")) {
+			if (browserName.contains("chrome")) {
 				System.setProperty("webdriver.chrome.driver",
 						ResourceHelper.getResourcePath() + "driver/chromedriver.exe");
 				ChromeOptions option = new ChromeOptions();
@@ -80,7 +82,7 @@ public class BrowserConfig {
 				chrome.setJavascriptEnabled(true);
 				option.setCapability(ChromeOptions.CAPABILITY, chrome);
 				return new ChromeDriver(option);
-			} else if (getConfigProperty().get("browser").toString().contains("firefox")) {
+			} else if (browserName.contains("firefox")) {
 				System.setProperty("webdriver.gecko.driver",
 						ResourceHelper.getResourcePath() + "driver/geckodriver 2.exe");
 				DesiredCapabilities firefox = DesiredCapabilities.firefox();
