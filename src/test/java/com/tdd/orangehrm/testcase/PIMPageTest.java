@@ -18,17 +18,17 @@ import com.tdd.orangehrm.pages.LoginPage;
 import com.tdd.orangehrm.pages.PIMPage;
 
 public class PIMPageTest extends TestBase {
-	public LoginPage login;	
+	public LoginPage login;
 	public PIMPage pim;
 	public HomePage home;
 	public boolean status = false;
 	public SoftAssert soft;
-	
-	
+
 	@Test(description = "Navigate to Add Employee")
 	public void navigateToAddEmployee() {
 		objectDeclaration();
-		login.loginOrganeHRM(brow.getConfigProperty().getProperty("admin_user"),brow.getConfigProperty().getProperty("admin_password"));
+		login.loginOrganeHRM(brow.getConfigProperty().getProperty("admin_user"),
+				brow.getConfigProperty().getProperty("admin_password"));
 		lib.moveOverToElement(home.PIM);
 		try {
 			lib.clickOnElement(pim.addEmployee);
@@ -39,11 +39,12 @@ public class PIMPageTest extends TestBase {
 		status = wait.waitForElementVisible(pim.addEmployee_header, 1);
 		Assert.assertTrue(status, "Failed!! Navigation to Add Employee");
 	}
-	
+
 	@Test(description = "Create Employee")
 	public void createEmployee() throws InterruptedException, IOException {
 		objectDeclaration();
-		login.loginOrganeHRM(brow.getConfigProperty().getProperty("admin_user"),brow.getConfigProperty().getProperty("admin_password"));
+		login.loginOrganeHRM(brow.getConfigProperty().getProperty("admin_user"),
+				brow.getConfigProperty().getProperty("admin_password"));
 		lib.moveOverToElement(home.PIM);
 		try {
 			lib.clickOnElement(pim.addEmployee);
@@ -66,33 +67,34 @@ public class PIMPageTest extends TestBase {
 		lib.setValueOnElement(pim.lastName, TD.lName);
 		lib.clearValueFromEditField(pim.empID);
 		lib.setValueOnElement(pim.empID, TD.empCode);
-		lib.setValueOnElement(pim.chooseFile,ResourceHelper.getResourcePath()+"images/tony.jpeg");
+		lib.setValueOnElement(pim.chooseFile, ResourceHelper.getResourcePath() + "images/tony.jpeg");
 		lib.clickOnElement(pim.btnSave);
 		String name = pim.addEmployee_header.getText();
-		Assert.assertEquals(name, TD.fName+" "+TD.lName , "Failed to create employee");
+		Assert.assertEquals(name, TD.fName + " " + TD.lName, "Failed to create employee");
 		lib.clickOnElement(pim.employeeList);
 		lib.clearValueFromEditField(pim.empSearchID);
 		lib.setValueOnElement(pim.empSearchID, TD.empCode);
 		lib.clickOnElement(pim.searchBtn);
-		WebElement el = driver.findElement(By.xpath("//td/a[contains(text(),'"+TD.empCode+"')]"));
-		if(wait.waitForElementVisible(el, TD.oneSecWait)) {
-			WebElement checkbox = driver.findElement(By.xpath("//a[contains(text(),'"+TD.empCode+"')]/parent::td/preceding::td/input"));
+		WebElement el = driver.findElement(By.xpath("//td/a[contains(text(),'" + TD.empCode + "')]"));
+		if (wait.waitForElementVisible(el, TD.oneSecWait)) {
+			WebElement checkbox = driver
+					.findElement(By.xpath("//a[contains(text(),'" + TD.empCode + "')]/parent::td/preceding::td/input"));
 			lib.clickOnElement(checkbox);
 			lib.clickOnElement(pim.delBtn);
 			lib.clickOnElement(pim.delOkBtn);
-			//wait.waitForElementVisible(pim.successfullyDeletedSnackbar, TD.oneSecWait);
+			// wait.waitForElementVisible(pim.successfullyDeletedSnackbar, TD.oneSecWait);
 			lib.clearValueFromEditField(pim.empSearchID);
 			lib.setValueOnElement(pim.empSearchID, TD.empCode);
 			lib.clickOnElement(pim.searchBtn);
-			status = wait.waitForElementVisible(pim.noRecordFoundMsg, TD.oneSecWait+1);
+			status = wait.waitForElementVisible(pim.noRecordFoundMsg, TD.oneSecWait + 1);
 			soft.assertTrue(status);
 		}
-		
-		soft.assertAll();	
-		
-       //Steps for Deletion of an that Employee which has been created. TC Complete
+
+		soft.assertAll();
+
+		// Steps for Deletion of an that Employee which has been created. TC Complete
 	}
-	
+
 	public void objectDeclaration() {
 		home = new HomePage(driver);
 		pim = new PIMPage(driver);
